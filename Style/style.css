@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-color: #aaa;
+    --button-correct: #5aae76;
+    --button-wrong: #e13e3e;
+    --background-color: #084035;
+    --background-color-hover: #0b5945;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    background-image: url(../Images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+main {    
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 750px;
+}
+
+.pokemonImage {
+    height: 13%;
+    position: absolute;
+    bottom:63%;
+    left: 41%;
+    transform: translate(-50%, 0);
+}
+
+.header {
+    position: absolute;
+    font-weight: 600;
+    color: #fff;
+    top: 26%;
+    right: 35%;
+    font-size: clamp(8px, 3vw, 30px);
+}
+
+.options-container {
+    position: absolute;
+    top: 43%;
+    left: 52%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    height: 50px;
+    margin: 10px;
+    width: calc(50% - 20px);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+button:hover {
+    background-color: var(--background-color-hover);
+}
+
+button.correct {
+    background-color: var(--button-correct);
+    color: #fff;
+}
+
+button.wrong {
+    background-color: var(--button-wrong);
+    color: #fff;
+}
+
+#points {
+    position: absolute;
+    top: 65%;
+    right:43%;
+    font-size: clamp(8px, 3vw, 30px);
+    font-weight: 600;
+    color: #fff;
+}
+
+#mistakes {
+    position: absolute;
+    top: 65%;
+    right: 35%;
+    font-size: clamp(8px, 3vw, 30px);
+    font-weight: 600;
+    color: #fff;
+}
+
+
