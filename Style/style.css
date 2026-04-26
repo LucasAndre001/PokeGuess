@@ -24,8 +24,11 @@ body {
 }
 
 main {    
-    display: inline-block;
-    margin-top: 2%;
+    position: relative;
+    display: block;
+    margin: 2% auto;
+    width: 100%;
+    max-width: 750px;
 }
 
 .pokedex {
@@ -33,11 +36,16 @@ main {
     max-width: 750px;
 }
 
+.pokedexFechada{
+    width: 100%;
+    max-width: 400px;
+}
+
 .pokemonImage {
-    height: 13%;
+    height: 18%;
     position: absolute;
-    bottom:63%;
-    left: 41%;
+    bottom:56%;
+    left: 25%;
     transform: translate(-50%, 0);
 }
 
@@ -45,17 +53,18 @@ main {
     position: absolute;
     font-weight: 600;
     color: #fff;
-    top: 26%;
-    right: 35%;
+    top: 30%;
+    right: 12%;
     font-size: clamp(8px, 3vw, 30px);
 }
 
 .options-container {
     position: absolute;
-    top: 43%;
-    left: 52%;
+    top: 53%;
+    left: 55%;
     display: flex;
     flex-wrap: wrap;
+    width: 43%;
 }
 
 button {
@@ -86,10 +95,18 @@ button.wrong {
     color: #fff;
 }
 
+#buttonJogar{
+    position: absolute;
+    top: 87%;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 30%;
+}
+
 #points {
     position: absolute;
-    top: 65%;
-    right:43%;
+    top: 82%;
+    right:32%;
     font-size: clamp(8px, 3vw, 30px);
     font-weight: 600;
     color: #fff;
@@ -97,11 +114,84 @@ button.wrong {
 
 #mistakes {
     position: absolute;
-    top: 65%;
-    right: 35%;
+    top: 82%;
+    right: 11.5%;
     font-size: clamp(8px, 3vw, 30px);
     font-weight: 600;
     color: #fff;
+}
+
+/* tamanho responsivo para tela menor */
+@media (max-width: 768px) {
+    main {
+        margin: 1% auto;
+        max-width: 90%;
+    }
+
+    .pokedex {
+        width: 100%;
+    }
+
+    .pokemonImage {
+        height: 15%;
+        bottom: 60%;
+        left: 50%;
+    }
+
+    .header {
+        top: 25%;
+        right: 25%;
+        font-size: clamp(10px, 4vw, 25px);
+    }
+
+    .options-container {
+        top: 40%;
+        left: 50%;
+        width: 25%;
+        transform: translateX(-50%);
+    }
+
+    button {
+        width: calc(50% - 10px);
+        font-size: 12px;
+    }
+
+    #points {
+        top: 62%;
+        right: 30%;
+    }
+
+    #mistakes {
+        top: 62%;
+        right: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemonImage {
+        height: 18%;
+        bottom: 58%;
+    }
+
+    .header {
+        top: 22%;
+        right: 20%;
+        font-size: clamp(12px, 5vw, 20px);
+    }
+
+    .options-container {
+        top: 35%;
+        width: 30%;
+    }
+
+    button {
+        height: 40px;
+        font-size: 11px;
+    }
+
+    #points, #mistakes {
+        font-size: clamp(10px, 4vw, 20px);
+    }
 }
 
 
